@@ -47,7 +47,7 @@ try:
                 with col3:
                     st.write(st.session_state.key,'>',st.session_state.key2)
                 df = pd.read_csv('tomato-result.csv',encoding='cp932')
-                df.at[ 1000000]  = [st.session_state.key ,st.session_state.key2 ,1 ,0] 
+                df.at[ 1000000]  = [st.session_state.key ,st.session_state.key2 ] 
                 csv = df.to_csv("tomato-result.csv", index=False )
                 st.session_state.hoge += 1
 
@@ -59,7 +59,7 @@ try:
                 with col3:
                     st.write(st.session_state.key,'<',st.session_state.key2)
                 df = pd.read_csv('tomato-result.csv',encoding='cp932')
-                df.at[ 1000000]  = [st.session_state.key2 ,st.session_state.key ,1 ,0] 
+                df.at[ 1000000]  = [st.session_state.key2 ,st.session_state.key ] 
                 df.to_csv("tomato-result.csv", index=False )
                 st.session_state.hoge += 1
                 
